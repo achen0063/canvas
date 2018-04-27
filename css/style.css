@@ -1,0 +1,23 @@
+#xxx{
+    background-color:green;display: block;
+    }
+*{
+    margin:0;
+  }
+button{
+   position: fixed;
+   bottom:0;
+   left:0;  
+  }
+#brush{
+  display: none;
+  
+}
+.btx.x > #eraser{
+  display: none;
+}
+.btx.x > #brush{
+  display: inline-block;
+}
+ 
+
