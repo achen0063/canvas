@@ -10,10 +10,25 @@
 </head>
 <body>
     <canvas id = 'xxx' wigth=300 height=300></canvas>
-    <div class="btx" id= 'btx' >
-    <button id = 'eraser'>橡皮擦</button>
-    <button id = 'brush'>画笔</button>
+    <div class="btx" id= 'btx'  >
+    <svg class="icon" id="pen" >
+        <use xlink:href="#icon-pen"></use>
+    </svg>
+    <svg class="icon" id="eraser">
+        <use xlink:href="#icon-eraser"></use>
+    </svg>
+    <svg class="icon" id="clear">
+        <use xlink:href="#icon-clear"></use>
+    </svg>
     </div>
+    <ol class="colors">
+        <li class="black active" id="black"></li>
+        <li class="red" id="red"></li>
+        <li class="yellow" id="yellow"></li>
+        <li class="blue" id="blue"></li>
+    </ol>
+    <script src="//at.alicdn.com/t/font_648609_psttkx5y814w8kt9.js"></script>
     <script src="./js/main.js"></script>
+
 </body>
 </html>

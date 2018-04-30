@@ -6,15 +6,52 @@ pageSize(yyy)
 listenMouse(yyy)
 
 var usingEraser = false
+// eraser.onclick = function () {
+//   usingEraser = true
+//   btx.className = 'btx x'
+// }
+// brush.onclick = function () {
+//   usingEraser = true
+//   btx.className = 'btx'
+// }
+pen.onclick = function () {
+  usingEraser = false;
+  pen.classList.add('active')
+  eraser.classList.remove('active')
+}
 eraser.onclick = function () {
-  usingEraser = true
-  btx.className = 'btx x'
+  usingEraser = true;
+  eraser.classList.add('active')
+  pen.classList.remove('active')
 }
-brush.onclick = function () {
-  usingEraser = true
-  btx.className = 'btx'
-}
+black.onclick = function () {
 
+  black.classList.add('active')
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  blue.classList.remove('active')
+}
+red.onclick = function () {
+  context.strokeStyle = 'red'
+  black.classList.remove('active')
+  red.classList.add('active')
+  yellow.classList.remove('active')
+  blue.classList.remove('active')
+}
+yellow.onclick = function () {
+  context.strokeStyle = 'yellow'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  yellow.classList.add('active')
+  blue.classList.remove('active')
+}
+blue.onclick = function () {
+  context.strokeStyle = 'blue'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  blue.classList.add('active')
+}
 
 
 
