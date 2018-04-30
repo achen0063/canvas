@@ -4,6 +4,9 @@
 *{
     margin:0;
   }
+body{
+  overflow: hidden;
+}
 button{
    position: fixed;
    bottom:0;
