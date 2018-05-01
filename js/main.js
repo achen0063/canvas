@@ -1,5 +1,7 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
+var pageWidth = document.documentElement.clientWidth;
+var pageHeight = document.documentElement.clientHeight;
 
 pageSize(yyy)
 
@@ -25,7 +27,7 @@ eraser.onclick = function () {
   pen.classList.remove('active')
 }
 black.onclick = function () {
-
+  context.strokeStyle = 'black'
   black.classList.add('active')
   red.classList.remove('active')
   yellow.classList.remove('active')
@@ -52,8 +54,19 @@ blue.onclick = function () {
   yellow.classList.remove('active')
   blue.classList.add('active')
 }
+clear.onclick = function (){
+  context.clearRect(0,0,pageWidth,pageHeight)
+}
 
-
+download.onclick = function(){
+  var url = yyy.toDataURL('image/png')
+  var a = document.createElement("a")
+  document.body.appendChild(a)
+  a.herf = url
+  a.download = '我的画作'
+  a.target = '_blank'
+  a.click() 
+}
 
 
 function listenMouse(canvas) {
@@ -136,8 +149,7 @@ function pageSize(canvas) {
     page()
   }
   function page() {
-    var pageWidth = document.documentElement.clientWidth;
-    var pageHeight = document.documentElement.clientHeight;
+
     canvas.width = pageWidth;
     canvas.height = pageHeight;
   }

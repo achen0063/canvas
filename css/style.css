@@ -1,5 +1,8 @@
 #xxx{
   background-color:white;display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 ol,ul{
   padding: 0;
@@ -46,12 +49,13 @@ body{
 .colors .active{
   transform: scale(1.2);
 }
-.colors li{
+.colors > li{
   width: 20px;
   height: 20px;
   border: 1px solid #ccc;
   border-radius:50%;
-  margin: 20xp 0;
+  margin: 5px;
+  transition: all 0.4s;
 }
 .colors li.black{
   background:black;
@@ -68,8 +72,8 @@ body{
 
 .colors{
   position: fixed;
-  top:55px;
-  left: 20px;
-  transition: all 0.3s;
+  top:50px;
+  left: 15px;
+  
 
 }
